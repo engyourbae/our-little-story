@@ -153,11 +153,14 @@ export function Chicken({ p, seed }: { p: V3; seed: number }) {
   });
   return (
     <group ref={g} position={p}>
-      <Sph p={[0, 0.28, 0]} r={0.22} sc={[1, 0.9, 1.25]} c="#fbfbf6" />
-      <Sph p={[0, 0.52, 0.2]} r={0.12} c="#fbfbf6" />
-      <Sph p={[0, 0.66, 0.2]} r={0.05} sc={[0.6, 1, 1.4]} c="#d9393a" cast={false} seg={8} />
-      <Cone p={[0, 0.5, 0.33]} rad={0.04} h={0.1} c="#f3a23a" seg={4} cast={false} />
-      <Box p={[0, 0.38, -0.27]} s={[0.05, 0.2, 0.16]} c="#e9e9e0" rot={[0.5, 0, 0]} />
+      <Sph p={[0, 0.3, 0]} r={0.25} sc={[0.95, 0.85, 1.3]} c="#fbfbf6" />
+      <Sph p={[0, 0.5, 0.3]} r={0.11} c="#fbfbf6" />
+      <Sph p={[0, 0.63, 0.3]} r={0.045} sc={[0.6, 1.1, 1.5]} c="#d9393a" cast={false} seg={8} />
+      <mesh position={[0, 0.48, 0.42]} rotation={[Math.PI / 2, 0, 0]}><coneGeometry args={[0.045, 0.12, 5]} /><meshStandardMaterial color="#f3a23a" /></mesh>
+      <Sph p={[0.07, 0.54, 0.38]} r={0.018} c="#2b1a17" cast={false} seg={6} /><Sph p={[-0.07, 0.54, 0.38]} r={0.018} c="#2b1a17" cast={false} seg={6} />
+      <Box p={[0, 0.46, -0.34]} s={[0.07, 0.3, 0.18]} c="#e9e9e0" rot={[0.6, 0, 0]} />
+      {[-0.1, 0.1].map((x) => <Cyl key={x} p={[x, 0.08, 0.02]} rt={0.015} rb={0.015} h={0.16} c="#f3a23a" seg={5} cast={false} />)}
+      {[-0.2, 0.2].map((x) => <Sph key={x} p={[x, 0.3, 0]} r={0.13} sc={[0.4, 0.8, 1]} c="#f1f1e6" seg={8} />)}
     </group>
   );
 }
