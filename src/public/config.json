@@ -1,0 +1,8 @@
+{
+  "photos": [
+    { "src": "photos/foto1.jpg", "caption": "Foto kita 1", "date": "" },
+    { "src": "photos/foto2.jpg", "caption": "Foto kita 2", "date": "" },
+    { "src": "photos/foto3.jpg", "caption": "Foto kita 3", "date": "" },
+    { "src": "photos/foto4.jpg", "caption": "Foto kita 4", "date": "" }
+  ]
+}
