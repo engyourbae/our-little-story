@@ -148,7 +148,7 @@ export function Chibi({ kind, expr, talking = false, pose = 'stand', anim = null
               <mesh ref={sx < 0 ? eyeL : eyeR} position={[sx * 0.17, -0.02, 0.462]}><sphereGeometry args={[1, 12, 10]} /><meshBasicMaterial color={ch.eye} /></mesh>
               <mesh position={[sx * 0.17 + 0.022, 0.025, 0.486]}><sphereGeometry args={[0.017, 6, 6]} /><meshBasicMaterial color="#ffffff" /></mesh>
               <mesh ref={sx < 0 ? arcL : arcR} position={[sx * 0.17, -0.04, 0.47]} rotation={[0, 0, 0]}><torusGeometry args={[0.05, 0.012, 6, 12, Math.PI]} /><meshBasicMaterial color={FACE} /></mesh>
-              <mesh ref={sx < 0 ? blushL : blushR} position={[sx * 0.3, -0.12, 0.385]}><sphereGeometry args={[1, 10, 8]} /><meshBasicMaterial color="#ff8fa3" transparent opacity={0.4} depthWrite={false} /></mesh>
+              <mesh ref={sx < 0 ? blushL : blushR} position={[sx * 0.29, -0.12, 0.4]} scale={[0.085, 0.05, 0.02]}><sphereGeometry args={[1, 10, 8]} /><meshBasicMaterial color="#ff8fa3" transparent opacity={0.4} depthWrite={false} /></mesh>
               <mesh ref={sx < 0 ? browL : browR} position={[sx * 0.17, 0.14, 0.45]}><boxGeometry args={[0.11, 0.02, 0.015]} /><meshBasicMaterial color={FACE} /></mesh>
             </group>
           ))}

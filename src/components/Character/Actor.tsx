@@ -8,7 +8,7 @@ import { world } from '../../systems/world';
 import { MODELS } from '../../config/characters';
 import { ErrorBoundary } from '../UI/ErrorBoundary';
 
-const SCALE = 0.78;
+const SCALE = 0.95;
 const angDamp = (a: number, b: number, l: number, dt: number) => {
   let d = ((b - a + Math.PI) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2) - Math.PI;
   return a + d * (1 - Math.exp(-l * dt));
